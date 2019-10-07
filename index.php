@@ -9,7 +9,7 @@
 
 // Stylesheets and JavaScript files
 function plugin_enqueue_scripts() {
-    wp_enqueue_style( 'plugin-styles', plugin_dir_url( __FILE__ ) . "/assets/css/style.css", '', '20191007');
+    wp_enqueue_style( 'plugin-styles', plugin_dir_url( __FILE__ ) . "/assets/css/styles.css", '', '20191007');
 }
 add_action( 'wp_enqueue_scripts', 'plugin_enqueue_scripts' );
 
