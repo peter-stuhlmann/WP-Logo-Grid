@@ -19,7 +19,8 @@ function plugin_display_logos($atts, $content = NULL) {
     $output = '<div>';
     foreach ($array1 as $value) {
         $image = wp_get_attachment_url($value);
-        $output .= '<img src="' . $image . '" />';
+        $alt = get_post_meta($value, '_wp_attachment_image_alt', true);
+        $output .= '<img src="' . $image . '" alt="' . $alt . '" />';
     }
     return $output . '</div>';
 }
