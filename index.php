@@ -1,20 +1,20 @@
 <?php
 /*
- * Plugin Name: Plugin
- * Description: Wordpress plugin.
+ * Plugin Name: WP Logo Grid
+ * Description: Creates responsive grid overviews of customers, partners, sponsors or similar.
  * Version: 1.0.0
  * Author: Peter R. Stuhlmann
  * Author URI: https://peter-stuhlmann-webentwicklung.de
  */
 
 // Stylesheets and JavaScript files
-function plugin_enqueue_scripts() {
-    wp_enqueue_style( 'plugin-styles', plugin_dir_url( __FILE__ ) . "/assets/css/styles.css", '', '20191007');
+function wp_logo_grid_enqueue_scripts() {
+    wp_enqueue_style( 'wp_logo_grid-styles', plugin_dir_url( __FILE__ ) . "/assets/css/styles.css", '', '20191007');
 }
-add_action( 'wp_enqueue_scripts', 'plugin_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_logo_grid_enqueue_scripts' );
 
 // Accept image IDs, seperated by commas and output images in a flexbox div
-function plugin_display_logos($atts, $content = NULL) {
+function wp_logo_grid_flexbox($atts, $content = NULL) {
     $array1 = preg_split("/[,]+/", $content );
     $output = '<div class="x_flex">';
     foreach ($array1 as $value) {
@@ -24,4 +24,5 @@ function plugin_display_logos($atts, $content = NULL) {
     }
     return $output . '</div>';
 }
-add_shortcode('x', 'plugin_display_logos');
+add_shortcode('x', 'wp_logo_grid_flexbox');
+
