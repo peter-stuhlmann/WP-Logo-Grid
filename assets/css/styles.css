@@ -1,2 +1,9 @@
+.x_flex {
+  display: flex;
+  flex-flow: row wrap; }
+  .x_flex div {
+    padding: 30px;
+    flex: 0 0 20%;
+    box-sizing: border-box; }
 
 /*# sourceMappingURL=styles.css.map */

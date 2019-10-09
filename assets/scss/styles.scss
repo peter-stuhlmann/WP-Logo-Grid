@@ -1,0 +1,11 @@
+.x_flex {
+  display: flex;
+  // justify-content: center;
+  flex-flow: row wrap;
+
+  div {
+    padding: 30px;
+    flex: 0 0 20%;
+    box-sizing: border-box;
+  }
+}
