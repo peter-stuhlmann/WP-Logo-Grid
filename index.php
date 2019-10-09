@@ -16,11 +16,11 @@ add_action( 'wp_enqueue_scripts', 'plugin_enqueue_scripts' );
 // Accept image IDs, seperated by commas and output images in a flexbox div
 function plugin_display_logos($atts, $content = NULL) {
     $array1 = preg_split("/[,]+/", $content );
-    $output = '<div>';
+    $output = '<div class="x_flex">';
     foreach ($array1 as $value) {
         $image = wp_get_attachment_url($value);
         $alt = get_post_meta($value, '_wp_attachment_image_alt', true);
-        $output .= '<img src="' . $image . '" alt="' . $alt . '" />';
+        $output .= '<div><img src="' . $image . '" alt="' . $alt . '" /></div>';
     }
     return $output . '</div>';
 }
