@@ -32,9 +32,16 @@ function wp_logo_grid_plugin_row_meta( $links, $file ) {
         $row_meta = array(
           'donate' => '<a href="https://www.paypal.me/prstuhlmann/2" style="color: green" target="_blank">Donate</a>'
         );
- 
         return array_merge( $links, $row_meta );
     }
     return (array) $links;
 }
 add_filter( 'plugin_row_meta', 'wp_logo_grid_plugin_row_meta', 10, 2 );
+
+
+// Plugin action links
+function wp_logo_grid_plugin_action_links( $links ) {
+   $links[] = '<a href="' . plugin_dir_url( __FILE__ ) . 'manual.html" style="color: green" target="_blank">Manual</a>';
+   return $links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wp_logo_grid_plugin_action_links' );
