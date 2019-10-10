@@ -42,6 +42,8 @@ function wp_logo_grid_plugin_row_meta( $links, $file ) {
 }
 add_filter( 'plugin_row_meta', 'wp_logo_grid_plugin_row_meta', 10, 2 );
 
+// Allows the integration of shortcodes in widget areas:
+add_filter( 'widget_text', 'do_shortcode' );
 
 // Plugin action links
 function wp_logo_grid_plugin_action_links( $links ) {
