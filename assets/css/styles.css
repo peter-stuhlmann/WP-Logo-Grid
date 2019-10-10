@@ -10,6 +10,11 @@
     flex: 0 0 20%;
     text-align: center;
     box-sizing: border-box; }
+    .x_flex div img {
+      transition: all 0.3s ease-in-out; }
+    @media only screen and (min-width: 1100px) {
+      .x_flex div:hover img {
+        transform: scale(1.1); } }
     @media only screen and (max-width: 1100px) {
       .x_flex div {
         padding: 30px;
@@ -35,5 +40,14 @@
         padding: 0;
         flex: 0 0 100%;
         box-sizing: border-box; } }
+  .x_flex .coloured {
+    filter: grayscale(0%); }
+  .x_flex .grayscale {
+    filter: grayscale(100%); }
+  .x_flex .grayscale-to-color {
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out; }
+    .x_flex .grayscale-to-color:hover {
+      filter: grayscale(0%); }
 
 /*# sourceMappingURL=styles.css.map */
