@@ -1,11 +1,13 @@
 <?php
 /*
  * Plugin Name: WP Logo Grid
+ * Plugin URI: https://peter-stuhlmann-webentwicklung.de/projects/wp-logo-grid
  * Description: Creates responsive grid overviews of customers, partners, sponsors or similar.
  * Version: 1.0.0
  * Author: Peter R. Stuhlmann
  * Author URI: https://peter-stuhlmann-webentwicklung.de
  * License: GPLv3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  */
 
 // Stylesheets and JavaScript files
@@ -42,7 +44,7 @@ add_filter( 'plugin_row_meta', 'wp_logo_grid_plugin_row_meta', 10, 2 );
 
 // Plugin action links
 function wp_logo_grid_plugin_action_links( $links ) {
-   $links[] = '<a href="' . plugin_dir_url( __FILE__ ) . 'manual.html" style="color: green" target="_blank">Manual</a>';
+   $links[] = '<a href="https://peter-stuhlmann-webentwicklung.de/projects/wp-logo-grid" style="color: green" target="_blank">Info</a>';
    return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wp_logo_grid_plugin_action_links' );
