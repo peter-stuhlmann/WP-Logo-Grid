@@ -56,4 +56,23 @@
       box-sizing: border-box;
     }
   }
+
+  // default class
+  .coloured {
+    filter: grayscale(0%);
+  }
+
+  // alternative classes
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale-to-color {
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
 }
