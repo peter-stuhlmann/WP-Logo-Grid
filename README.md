@@ -8,6 +8,9 @@
 [![closed issues](https://img.shields.io/github/issues-closed/peter-stuhlmann/WP-Logo-Grid.svg)](https://github.com/peter-stuhlmann/WP-Logo-Grid/issues?q=is%3Aissue+is%3Aclosed)
 [![closed issues](https://img.shields.io/badge/dev-Peter%20R.%20Stuhlmann-green.svg)](https://peter-stuhlmann-webentwicklung.de)
 
+![Screenshot](./screenshot.png)
+<span style="font-size: 12px">Sample Preview (Screenshot)</span>
+
 ## How to use it
 
 Write the shortcode "x" in square brackets and close it like in the following example. Within the two shortcode tags you write all Wordpress image IDs you want to represent.
