@@ -17,7 +17,7 @@ Write the shortcode "x" in square brackets and close it like in the following ex
 
 **Syntax example:**
 
-> [x]47,264,193,132,174,453[/x]
+<div style="font-size: 20px; text-align: center; padding: 15px; color: #000; background-color: #E6E9EB">[x]47,264,193,132,174,453[/x]</div>
 
 ## License
 
